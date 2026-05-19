@@ -1,20 +1,20 @@
-
-
 const App = () => {
+  let marks = 0;
   return (
     <div>
-      <button style={{
-        backgroundColor: "blue",
-        color: "white",
-        padding: "10px 20px",
-        border: "none",
-        borderRadius: "5px",
-        cursor: "pointer"
-      }} 
-      
-      
-      onClick={() => alert("Button clicked!")}>Click me</button>
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg"  style={{ marginLeft: "20px" }} />
+      {(() => {
+        if (marks < 40 && marks >0) {
+          return <h1>Fail</h1>;
+        } else if (marks >= 40 && marks < 60) {
+          return <h1>satisfactory</h1>;
+        } 
+        else if (marks==0){
+          return <h1>Absent</h1>
+        }
+        else {
+          return <h1>Excellent</h1>;
+        }
+      })()}
     </div>
   );
 };
