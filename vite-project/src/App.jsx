@@ -1,21 +1,27 @@
+const LoginStatusButton=(status)=>{
+  if(status){
+    return <button>Logout</button>
+  }
+  else{
+    return <button>Login</button>
+  }
+
+}
+
+
+
+
 const App = () => {
-  let marks = 0;
+
   return (
     <div>
-      {(() => {
-        if (marks < 40 && marks >0) {
-          return <h1>Fail</h1>;
-        } else if (marks >= 40 && marks < 60) {
-          return <h1>satisfactory</h1>;
-        } 
-        else if (marks==0){
-          return <h1>Absent</h1>
-        }
-        else {
-          return <h1>Excellent</h1>;
-        }
-      })()}
+      <h1>Login Status</h1>
+    {LoginStatusButton(true)}
     </div>
   );
+
+
+
+ 
 };
 export default App;
